@@ -39,3 +39,10 @@ h1 {
     width: 300px;
     border-radius: 10px;
 }
+
+.dice-container {
+  width: 150px;          
+  height: 150px;         
+  overflow: hidden;     
+  position: relative;
+}
