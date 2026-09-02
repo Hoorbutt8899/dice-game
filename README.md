@@ -1,1 +1,1 @@
-# dice-game-by-hoor
+# Dice-Game
