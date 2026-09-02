@@ -9,7 +9,7 @@ h1 {
    
 }
 .player1 h4 {
-    position: absolute;
+    position: relative;
     top: 30%;
     left: 40%;
     transform: translate(-50%, -50%);
@@ -17,7 +17,7 @@ h1 {
     color: #3ed199;
 }
 .player2 h4 {
-    position: absolute;
+    position: relative;
     top: 30%;
     left: 60%;
     transform: translate(-50%, -50%);
@@ -26,7 +26,7 @@ h1 {
     
 }
 .img6 {
-    position: absolute;
+    position: relative;
     top: 45%;
     left: 30%;
     width: 300px;
@@ -34,7 +34,7 @@ h1 {
      object-fit: cover;
 }
 .dice6 {
-    position: absolute;
+    position: relative;
     top: 45%;
     left: 55%;
     width: 300px;
