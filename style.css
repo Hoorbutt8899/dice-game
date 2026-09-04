@@ -1,51 +1,114 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #373d47;
+    font-family: sans-serif;
+    min-height: 100vh;
+    position: relative;
 }
+
 h1 {
     text-align: center;
-    margin-top: 50px;
-    font-size: 80px;
-    color: #3ed199;
-   
+    padding-top: 50px;
+    font-size: 80px; 
+    color: #3ed199; 
 }
+
 .player1 h4 {
-    position: relative;
+    position: absolute;
     top: 30%;
     left: 40%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 40px; 
     color: #3ed199;
 }
+
 .player2 h4 {
-    position: relative;
+    position: absolute;
     top: 30%;
     left: 60%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 40px; 
     color: #3ed199;
-    
 }
+    
 .img6 {
-    position: relative;
+    position: absolute;
     top: 45%;
     left: 30%;
-    width: 300px;
+    width: 300px; 
     border-radius: 10px;
-     object-fit: cover;
-}
-.dice6 {
-    position: relative;
-    top: 45%;
-    left: 55%;
-    width: 300px;
-    border-radius: 10px;
-     object-fit: cover;
 }
 
-.dice-container {
-    width: 250px;           
-    height: 250px;        
-    border-radius: 35px;    
-    overflow: hidden;       
-    display: inline-block;
+.dice6 {
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    width: 300px; 
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   2. TABLET & MOBILE RESPONSIVE ADJUSTMENTS
+   (Only runs on smaller screens to prevent overlap)
+   ========================================== */
+@media (max-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3.5rem; /* Safely shrinks font ONLY on small mobile/tabs */
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Undo absolute layout safely for smaller touch devices */
+    .player1 h4, .player2 h4, .img6, .dice6 {
+        position: static;
+        transform: none;
+        display: inline-block;
+        margin: 0;
+    }
+
+    /* Group player layout blocks side-by-side responsively */
+    .player1, .player2 {
+        display: inline-block;
+        width: 45%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .player1 h4, .player2 h4 {
+        font-size: 2.2rem;
+    }
+
+    .img6, .dice6 {
+        width: 80%;
+        max-width: 220px;
+        height: auto;
+        margin-top: 15px;
+    }
+}
+
+/* Vertical structural stack for phone screens */
+@media (max-width: 480px) {
+    .player1, .player2 {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .img6, .dice6 {
+        max-width: 160px;
+    }
 }
